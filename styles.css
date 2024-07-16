@@ -2,10 +2,22 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-    background-color: #6c6c7d;
+html, body {
+  background: rgb(40,40,90);
+  background: linear-gradient(39deg, rgba(40,40,90,1) 0%, rgba(63,63,104,1) 35%, rgba(108,108,125,1) 100%);
+  margin: 0;
+  min-height: 100vh;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+* ,
+*::before ,
+*::after {
+  box-sizing: inherit;
+}
 h1 {
     font-weight: bold;
     font-size: 48px;
@@ -16,9 +28,14 @@ h1 {
 
 h2 {
     font-weight: bold;
-    padding-left: 2%;
+    padding-left: 1%;
     color: #36364a;
+    border-bottom: #36364a dashed 2px;
+    padding-bottom: 14px;
+    border-left: #36364a solid 1px;
 }
+
+
 
 p {
     padding-left: 2%;
@@ -32,16 +49,28 @@ p {
     list-style-type: none;
     margin: 2% auto auto auto;
     list-style-position: outside;
-    padding: 0 0 0 0;
-    width: 20%;
+    padding: 5px 0 5px 0;
+    width: 30%;
     background-color: #dfbccc;
     border-radius: 15px 50px 30px;
 }
 
 
 #recipes-list li{
-    line-height: 200%;
+  line-height: 200%;
+  display: block;
+  background-color: antiquewhite;
+  width: 55%;
+  
+  margin: 12px auto;
+  font-size: 24px;
+  border-radius: 10px;
+  border: #bc725c 2px solid;
+}
 
+#recipes-list a{
+  padding: 6px;
+  display: inline-block;
 }
 
 .recipe-title {
@@ -49,6 +78,10 @@ p {
     padding: 2% 2% 0 0;
   }
 
+  span{
+    color:maroon;
+    font-weight: bold;
+  }
 a:link, a:visited {
     color: #a3796c;
     text-decoration: none;
@@ -63,18 +96,41 @@ a:link, a:visited {
   }
 
   img {
-    float: right;
     border: solid salmon 4px;
-    margin-right: -10px;
     padding-right: 0;
-    
-    border-radius: 3% 0 0 3%;
-    border-right:0;
+    width: 100%;
+    border-radius: 8px;
+    margin-right: -5px;
   }
 
   div#content {
-    background-color: #a3796c;
-    border-radius: 2% 0 0 2%;
-    padding: 0.5% 0 0.5% 0.5%
+    background: rgb(163,121,108);
+background: linear-gradient(39deg, rgba(163,121,108,0.7) 0%, rgba(190,136,119,0.7) 35%, rgba(223,146,122,0.7) 100%);
+    width: 60%;
+    border-radius: 10px 10px 10px 0;
+    padding-bottom: 5%;
   }
 
+  .wrapper {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  div#title-card{
+    width: 40%;
+  }
+
+  div#content > * {
+    width: 80%;
+    margin-left: 3%
+  }
+
+  div ul {
+    font-style: italic;
+  }
+  
+  div#content p {
+    color: rgb(32, 53, 53);
+    margin-left: 10%;
+    padding-right: 30%;
+  }
